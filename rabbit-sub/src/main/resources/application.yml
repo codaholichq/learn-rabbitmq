@@ -1,0 +1,26 @@
+spring:
+  threads:
+    virtual:
+      enabled: true
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+      port: 35730
+  rabbitmq:
+    host: ${RABBIT_HOST:localhost}
+    port: ${RABBIT_PORT:5672}
+    username: ${RABBIT_USERNAME:rabbit}
+    password: ${RABBIT_PASSWORD:rabbit}
+#    listener:
+#      simple:
+#        retry:
+#          enabled: true
+#          initial-interval: 10000
+#          max-attempts: 2
+#          multiplier: 1
+#          max-interval: 30000
+#        default-requeue-rejected: true
+server:
+  port: 3050
